@@ -1,4 +1,4 @@
-import { createSignal, onMount, For } from 'solid-js';
+import { createSignal, onMount } from 'solid-js';
 import { Chart, Title, Tooltip, Legend, ArcElement, LineElement, CategoryScale, LinearScale, BarElement, PointElement, Colors } from 'chart.js';
 import { Line } from 'solid-chartjs';
 
