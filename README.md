@@ -56,10 +56,10 @@ Big Play Launcher is your personal coach for making audacious financial moves. T
    4. **Stay Accountable**: User stays motivated and focused through regular prompts.
 
 10. **Pivot Planner**
-    1. **Identify Challenges**: User identifies areas where their current approach isn't working.
-    2. **Access Pivot Planner**: User opens the Pivot Planner tool.
-    3. **Generate Alternatives**: The app helps strategize alternative routes using AI.
-    4. **Implement New Plan**: User reviews the new plan and adjusts their strategy accordingly.
+     1. **Identify Challenges**: User identifies areas where their current approach isn't working.
+     2. **Access Pivot Planner**: User opens the Pivot Planner tool.
+     3. **Generate Alternatives**: The app helps strategize alternative routes using AI.
+     4. **Implement New Plan**: User reviews the new plan and adjusts their strategy accordingly.
 
 ## External APIs Used
 

@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { createSignal, For, Show } from 'solid-js';
 import { createEvent } from '../supabaseClient';
 
 function GoalSetting() {
@@ -24,7 +24,7 @@ function GoalSetting() {
 
   return (
     <div class="p-8 h-full">
-      <h2 class="text-2xl font-bold mb-4">Goal Setting</h2>
+      <h2 class="text-2xl font-bold mb-4 text-purple-600">Goal Setting</h2>
       <form onSubmit={handleGoalSubmit} class="space-y-4">
         <input
           type="text"
@@ -43,18 +43,18 @@ function GoalSetting() {
         </button>
       </form>
 
-      {actionSteps().length > 0 && (
+      <Show when={actionSteps().length > 0}>
         <div class="mt-8">
-          <h3 class="text-xl font-bold mb-4">Action Steps</h3>
-          <ul class="list-disc pl-5 space-y-2">
+          <h3 class="text-xl font-bold mb-4 text-purple-600">Action Steps</h3>
+          <ul class="list-decimal pl-5 space-y-2">
             <For each={actionSteps()}>
-              {(step, index) => (
+              {(step) => (
                 <li>{step}</li>
               )}
             </For>
           </ul>
         </div>
-      )}
+      </Show>
     </div>
   );
 }

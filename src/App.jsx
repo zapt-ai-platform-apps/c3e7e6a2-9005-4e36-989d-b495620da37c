@@ -12,7 +12,7 @@ function App() {
     const { data: { user } } = await supabase.auth.getUser();
     if (user) {
       setUser(user);
-      navigate('/dashboard');
+      navigate('/dashboard/goal-setting');
     } else {
       navigate('/login');
     }
@@ -24,7 +24,7 @@ function App() {
     const { data: authListener } = supabase.auth.onAuthStateChange((_, session) => {
       if (session?.user) {
         setUser(session.user);
-        navigate('/dashboard');
+        navigate('/dashboard/goal-setting');
       } else {
         setUser(null);
         navigate('/login');
@@ -37,7 +37,7 @@ function App() {
   });
 
   return (
-    <div class="h-full text-gray-800">
+    <div class="min-h-screen h-full text-gray-800">
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard/*" element={<Dashboard user={user} />} />
